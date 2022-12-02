@@ -10,12 +10,33 @@ const Profiles = () => {
       .then((response) => response.json())
       .then((data) => setState(data.data));
   });
+  
   if (State == null) {
     return <div>Loading...</div>;
   }
   return (
     <>
-      <h1>Registered User</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          margin: "auto",
+          textAlign: "center",
+        }}
+      >
+        <h1>Registered User</h1>
+        <Link to='add'>
+         
+          <button
+            style={{
+              backgroundColor: "gray",
+              marginLeft: "20px",
+            }}
+          >
+            Add User
+          </button>
+        </Link>
+      </div>
 
       <div
         style={{
